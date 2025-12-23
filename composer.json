@@ -1,0 +1,23 @@
+{
+  "name": "limanmys/template",
+  "description": "Liman Extension Template",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Ali Bugra OKKALI",
+      "email": "alibugra@liman.dev"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "files": [
+      "app/Helpers/Helpers.php"
+    ],
+    "psr-4": {
+      "App\\": "app"
+    },
+    "classmap": [
+      "app"
+    ]
+  }
+}

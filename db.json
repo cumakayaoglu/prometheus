@@ -1,0 +1,53 @@
+{
+  "name": "prometheus",
+  "publisher": "HAVELSAN A.Ş.",
+  "version": "DEV3",
+  "version_code": 7,
+  "database": [
+    {
+      "variable": "api_url",
+      "type": "text",
+      "name": "Prometheus Adresi ",
+      "required": true,
+      "global": false,
+      "writable": true
+    }
+  ],
+  "widgets": [],
+  "language": "php",
+  "status": 0,
+  "service": "9090",
+  "supportedLiman": "635",
+  "support": "aciklab@havelsan.com.tr",
+  "icon": "magnifying-glass-chart",
+  "require_key": "false",
+  "verification": null,
+  "dependencies": null,
+  "sslPorts": null,
+  "display_name": {
+    "tr": "Prometheus İzleme",
+    "en": "Prometheus Monitoring"
+  },
+  "functions": [
+    {
+      "name": "home",
+      "description": "Ana Sayfa",
+      "isActive": "true",
+      "displayLog": "true"
+    }
+  ],
+  "vite": true,
+  "skeleton": true,
+  "preload": true,
+  "license_type": "golang_standard",
+  "menus": [
+    {
+      "name": {
+        "tr": "Anasayfa",
+        "en": "Home"
+      },
+      "url": "#/home",
+      "key": "home"
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "common": {
+    "table": {
+      "actions": "İşlemler"
+    },
+    "success": "Başarılı",
+    "error": "Hata",
+    "in_progress": "Devam Ediyor",
+    "starting": "Başlatıldı",
+    "warning": "Uyarı",
+    "refresh": "Yenile",
+    "are_you_sure": "Bu işlemi gerçekleştirmek istediğinize emin misiniz?",
+    "yes": "Evet",
+    "no": "Hayır",
+    "check_the_fields": "Devam etmek için eksik alanları kontrol ediniz.",
+    "multi_select_placeholder": "Oluşturmak için girdi yapın ve Enter tuşuna basın",
+    "ok": "TAMAM",
+    "prev": "Önceki",
+    "next": "Sonraki",
+    "save": "Kaydet",
+    "apply": "Uygula",
+    "clear": "Temizle",
+    "leftp": "(",
+    "rightp": ")",
+    "dash": "-",
+    "star": "*",
+    "slash": "/",
+    "three_dots": "...",
+    "pdf": "PDF",
+    "csv": "CSV",
+    "add": "Ekle",
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "create": "Oluştur",
+    "update": "Güncelle",
+    "toggle-on": "Aktif Et",
+    "toggle-off": "Pasif Et",
+    "approve": "Onayla",
+    "sync": "Senkronize Et",
+    "retry": "Tekrar Dene",
+    "start": "Başlat",
+    "last_week": "(Son 1 Hafta)",
+    "all": "Tümü",
+    "upload": {
+      "header_text": "Yüklemek için bu alana dosyanızı sürükleyebilirsiniz",
+      "sub_text": "Gizli bilgilerinizi yüklemediğinize emin olun. Örnek olarak, şifreler, kredi kartı numaraları, sosyal güvenlik numaraları, vb."
+    },
+    "online": "Online",
+    "offline": "Offline",
+    "acknowledge": "Onayla",
+    "unacknowledge": "Onayı Kaldır",
+    "others": "Diğer",
+    "type_to_search": "Arama yapmak için yazın...",
+    "active": "Aktif",
+    "inactive": "Aktif Değil",
+    "scan": "Tarama Başlat",
+    "interrupted": "Yarıda Kesildi",
+    "finished": "Tamamlandı",
+    "total": "Toplam",
+    "tümü": "Tümü",
+    "up": "Up",
+    "down": "Down",
+    "available": "Available",
+    "not_available": "Not Available",
+    "run": "Çalıştır",
+    "download": "İndir",
+    "no_permission": "Bu sayfayı görüntüleme izniniz bulunmamaktadır. Lütfen yöneticiniz ile iletişime geçiniz."
+  },
+  "table": {
+    "filter": {
+      "placeholder": "Arama...",
+      "clear": "Temizle",
+      "apply": "Uygula"
+    },
+    "search": {
+      "placeholder": "Arama..."
+    }
+  },
+  "navigation": {
+    "permission": {
+      "title": "Yetki Hatası",
+      "description": "Gerekli yetkiniz bulunmamakta."
+    },
+    "home": {
+      "title": "Ana Sayfa",
+      "description": "Ana sayfaya hoş geldiniz."
+    },
+    "monitoring_services": {
+      "title": "İzleme Servisleri",
+      "description": "İzleme Servislerinizi buradan yönetebilirsiniz."
+    },
+    "configuration_items": {
+      "title": "Yapılandırma Ögeleri",
+      "description": "Yapılandırma ögelerinizi buradan yönetebilirsiniz."
+    },
+    "dps_management": {
+      "title": "DPS Yönetimi",
+      "description": "DPS versiyon bilgilerini buradan görüntüleyebilir ve yönetebilirsiniz."
+    }
+  },
+  "data": {
+    "table": {
+      "name": "Ad",
+      "updated_at": "Güncellenme Tarihi"
+    },
+    "fetch": {
+      "messages": {
+        "error": "Veriler getirilirken bir hata oluştu."
+      }
+    },
+    "create": {
+      "title": "Veri Oluştur",
+      "rules": {
+        "name": "Ad alanı zorunludur."
+      },
+      "messages": {
+        "success": "Veri başarıyla oluşturuldu.",
+        "error": "Veri oluşturulurken bir hata oluştu."
+      }
+    },
+    "update": {
+      "title": "Veri Güncelle",
+      "messages": {
+        "success": "Veri başarıyla güncellendi.",
+        "error": "Veri güncellenirken bir hata oluştu."
+      }
+    },
+    "delete": {
+      "messages": {
+        "success": "Veri başarıyla silindi.",
+        "error": "Veri silinirken bir hata oluştu."
+      }
+    }
+  },
+  "monitoring_services": {
+    "table": {
+      "title": "İzleme Servisi",
+      "content": "İçerik",
+      "url": "URL",
+      "tag": "Etiket"
+    },
+    "fetch": {
+      "messages": {
+        "error": "İzleme servisleri getirilirken bir hata oluştu."
+      }
+    },
+    "create": {
+      "title": "İzleme Servisi Oluştur",
+      "rules": {
+        "title": "Lütfen başlık giriniz.",
+        "content": "Lütfen içerik giriniz.",
+        "url": "Lütfen URL giriniz.",
+        "tag": "Lütfen etiket giriniz.",
+        "priority": "Lütfen öncelik giriniz."
+      },
+      "inputs": {
+        "title": "Başlık",
+        "content": "İçerik",
+        "url": "URL",
+        "tag": "Etiket",
+        "priority": "Öncelik"
+      },
+      "messages": {
+        "success": "İzleme servisi başarıyla oluşturuldu.",
+        "error": "İzleme servisi oluşturulurken bir hata oluştu."
+      }
+    },
+    "update": {
+      "title": "İzleme Servisi Güncelle",
+      "messages": {
+        "success": "İzleme servisi başarıyla güncellendi.",
+        "error": "İzleme servisi güncellenirken bir hata oluştu."
+      }
+    },
+    "delete": {
+      "messages": {
+        "success": "İzleme servisi başarıyla silindi.",
+        "error": "İzleme servisi silinirken bir hata oluştu."
+      }
+    }
+  },
+  "configuration_items": {
+    "table": {
+      "description": "Açıklama",
+      "dev_version": "Geliştirme Versiyonu",
+      "test_version": "Test Versiyonu"
+    },
+    "fetch": {
+      "messages": {
+        "error": "Yapılandırma ögeleri getirilirken bir hata oluştu."
+      }
+    },
+    "create": {
+      "title": "Yapılandırma Ögesi Oluştur",
+      "rules": {
+        "description": "Açıklama alanı zorunludur.",
+        "dev_version": "Geliştirme versiyonu alanı zorunludur.",
+        "test_version": "Test versiyonu alanı zorunludur."
+      },
+      "inputs": {
+        "description": "Açıklama",
+        "dev_version": "Geliştirme Versiyonu",
+        "test_version": "Test Versiyonu"
+      },
+      "messages": {
+        "success": "Yapılandırma ögesi başarıyla oluşturuldu.",
+        "error": "Yapılandırma ögesi oluşturulurken bir hata oluştu."
+      }
+    },
+    "update": {
+      "title": "Yapılandırma Ögesi Güncelle",
+      "messages": {
+        "success": "Yapılandırma ögesi başarıyla güncellendi.",
+        "error": "Yapılandırma ögesi güncellenirken bir hata oluştu."
+      }
+    },
+    "delete": {
+      "messages": {
+        "success": "Yapılandırma ögesi başarıyla silindi.",
+        "error": "Yapılandırma ögesi silinirken bir hata oluştu."
+      }
+    }
+  },
+  "dps": {
+    "version_info": "Versiyon Bilgileri",
+    "cbdc_api": "CBDC API",
+    "blockchain": "Blokzincir"
+  }
+}

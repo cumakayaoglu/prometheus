@@ -1,0 +1,229 @@
+{
+  "common": {
+    "table": {
+      "actions": "Actions"
+    },
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "in_progress": "In Progress",
+    "starting": "Starting",
+    "refresh": "Refresh",
+    "are_you_sure": "Are you sure you want to continue?",
+    "yes": "Yes",
+    "no": "No",
+    "check_the_fields": "Check the missing fields to continue.",
+    "multi_select_placeholder": "Please input and press Enter",
+    "ok": "OK",
+    "prev": "Previous",
+    "next": "Next",
+    "save": "Save",
+    "apply": "Apply",
+    "clear": "Clear",
+    "leftp": "(",
+    "rightp": ")",
+    "dash": "-",
+    "slash": "/",
+    "star": "*",
+    "three_dots": "...",
+    "pdf": "PDF",
+    "csv": "CSV",
+    "add": "Add",
+    "create": "Create",
+    "update": "Update",
+    "edit": "Edit",
+    "delete": "Delete",
+    "toggle-on": "On",
+    "toggle-off": "Off",
+    "approve": "Approve",
+    "start": "Start",
+    "sync": "Sync",
+    "retry": "Retry",
+    "last_week": "(Last Week)",
+    "upload": {
+      "header_text": "Drag and drop your file into this area to upload",
+      "sub_text": "Make sure you don't upload any sensitive information. For example, passwords, credit card numbers, social security numbers, etc."
+    },
+    "online": "Online",
+    "offline": "Offline",
+    "version": "Sürüm",
+    "acknowledge": "Acknowledge",
+    "unacknowledge": "Unacknowledge",
+    "others": "Others",
+    "type_to_search": "Type to search...",
+    "active": "Active",
+    "inactive": "Inactive",
+    "scan": "Start Scan",
+    "interrupted": "Interrupted",
+    "finished": "Finished",
+    "total": "Total",
+    "all": "All",
+    "up": "Up",
+    "down": "Down",
+    "available": "Available",
+    "not_available": "Not Available",
+    "run": "Run",
+    "download": "Download",
+    "no_permission": "You don't have permission to view this page. Please contact your administrator."
+  },
+  "table": {
+    "filter": {
+      "placeholder": "Search in...",
+      "clear": "Clear",
+      "apply": "Apply"
+    },
+    "search": {
+      "placeholder": "Search in..."
+    }
+  },
+  "navigation": {
+    "permission": {
+      "title": "Permission Error",
+      "description": "You don't have permission to view this page. Please contact your administrator."
+    },
+    "home": {
+      "title": "Home",
+      "description": "Welcome to the home page."
+    },
+    "monitoring_services": {
+      "title": "Monitoring Services",
+      "description": "List of monitoring services."
+    },
+    "configuration_items": {
+      "title": "Configuration Items",
+      "description": "List of configuration items."
+    },
+    "dps_management": {
+      "title": "DPS Management",
+      "description": "You can view and manage DPS version information from here."
+    }
+  },
+  "data": {
+    "table": {
+      "name": "Name",
+      "updated_at": "Updated At"
+    },
+    "fetch": {
+      "messages": {
+        "error": "An error occurred while fetching data."
+      }
+    },
+    "create": {
+      "title": "Create Data",
+      "rules": {
+        "name": "Name is required."
+      },
+      "messages": {
+        "success": "Successfully created new data.",
+        "error": "An error occured while creating data."
+      }
+    },
+    "update": {
+      "title": "Update Data",
+      "messages": {
+        "success": "Successfully updated data.",
+        "error": "An error occured while updating data."
+      }
+    },
+    "delete": {
+      "messages": {
+        "success": "Successfully deleted data.",
+        "error": "An error occured while deleting data."
+      }
+    }
+  },
+  "monitoring_services": {
+    "table": {
+      "title": "Monitoring Service",
+      "content": "Content",
+      "url": "URL",
+      "tag": "Tag"
+    },
+    "fetch": {
+      "messages": {
+        "error": "An error occurred while fetching monitoring services."
+      }
+    },
+    "create": {
+      "title": "Create Monitoring Service",
+      "rules": {
+        "title": "Please enter a title.",
+        "content": "Please enter a content.",
+        "url": "Please enter a URL.",
+        "tag": "Please enter a tag.",
+        "priority": "Please enter a priority."
+      },
+      "inputs": {
+        "title": "Title",
+        "content": "Content",
+        "url": "URL",
+        "tag": "Tag",
+        "priority": "Priority"
+      },
+      "messages": {
+        "success": "Successfully created monitoring service.",
+        "error": "An error occured while creating monitoring service."
+      }
+    },
+    "update": {
+      "title": "Update Monitoring Service",
+      "messages": {
+        "success": "Successfully updated monitoring service.",
+        "error": "An error occured while updating monitoring service."
+      }
+    },
+    "delete": {
+      "messages": {
+        "success": "Successfully deleted monitoring service.",
+        "error": "An error occured while deleting monitoring service."
+      }
+    }
+  },
+  "configuration_items": {
+    "table": {
+      "description": "Description",
+      "dev_version": "Dev Version",
+      "test_version": "Test Version"
+    },
+    "fetch": {
+      "messages": {
+        "error": "An error occurred while fetching configuration items."
+      }
+    },
+    "create": {
+      "title": "Create Configuration Item",
+      "rules": {
+        "description": "Please enter a description.",
+        "dev_version": "Please enter a dev version.",
+        "test_version": "Please enter a test version."
+      },
+      "inputs": {
+        "description": "Description",
+        "dev_version": "Dev Version",
+        "test_version": "Test Version"
+      },
+      "messages": {
+        "success": "Successfully created configuration item.",
+        "error": "An error occured while creating configuration item."
+      }
+    },
+    "update": {
+      "title": "Update Configuration Item",
+      "messages": {
+        "success": "Successfully updated configuration item.",
+        "error": "An error occured while updating configuration item."
+      }
+    },
+    "delete": {
+      "messages": {
+        "success": "Successfully deleted configuration item.",
+        "error": "An error occured while deleting configuration item."
+      }
+    }
+  },
+  "dps": {
+    "version_info": "Version Information",
+    "cbdc_api": "CBDC API",
+    "blockchain": "Blockchain"
+  }
+}
