@@ -1,66 +1,66 @@
-# Elasticsearch Kurumsal Yönetim ve Operasyonel Analiz Platformu
+# Prometheus İzleme ve Dinamik Dashboard Motoru
 
-**Platform:** Liman MYS v2.0+ Ekosistemi  
-**Mimari:** Vue 3 (Composition API), TypeScript 5.0, Pinia State Management, ECharts, Naive UI  
-**Temel Bileşenler:** Cluster Health, Node Management, Log Discovery, Data View Engine, KQL Engine
+**Liman MYS Uyumluluk:** v2.0+  
+**Teknoloji Yığını:** Vue.js 3 (Composition API), TypeScript, ApexCharts, Pinia Store
 
-Elasticsearch Extension, kurumsal BT altyapılarında kullanılan Elasticsearch kümelerinin tek bir merkezden, gelişmiş görselleştirme araçları ve operasyonel komutlarla yönetilmesini sağlayan kapsamlı bir Liman MYS çözümüdür. Sistem, cluster sağlığından en ince log detayına kadar tüm veri akışını modernize edilmiş ve performans odaklı bir mimariyle sunar.
+Prometheus Extension, Liman MYS platformu için geliştirilmiş, kurumsal seviyede bir metrik izleme, analiz ve dashboard yönetim platformudur. Proje, sistem metriklerini gerçek zamanlı izlemenin ötesinde, kompleks PromQL sorgularını işleyebilen ve özelleştirilebilir bir veri yönetim framework'ü sunar.
 
-## İleri Seviye Teknik Kabiliyetler
+## Temel Kabiliyetler
 
-1. Akıllı Veri Görünümü (Data View) ve İndeks Yönetimi
-    - Dinamik Pattern Eşleştirme: İndeksleri gruplandırmak için kullanılan Index Pattern yapısı, Regex ve Asterisk (*) desteğiyle anlık olarak doğrulanır. Kullanıcı pattern yazdığı anda eşleşen indeksler gerçek zamanlı olarak raporlanır.
-    - Timestamp Validasyonu: Verilerin zaman serisi olarak işlenebilmesi için indeks mapping yapıları taranarak `@timestamp` ve benzeri zaman alanlarının varlığı otomatik kontrol edilir.
-    - CRUD ve Persistence: Oluşturulan Data View yapıları tarayıcı belleğinde ve store katmanında kalıcı (persistent) olarak saklanır, hızlı geçiş imkanı sunar.
+### Merkezi Yönetim ve Akıllı Sorgu Motoru (Home View)
+- Gelişmiş PromQL Editörü: Metrik isimleri, fonksiyonlar ve agregasyonlar için tip bazlı (Metric, Function, Aggregation) otomatik tamamlama desteği.
+- Sorgu Geçmişi ve Bellek: Sık kullanılan sorguları saklayan yerel geçmiş yönetimi ve sayfa yenilense dahi kaybolmayan state yapısı.
+- Dinamik Veri Kartları (Stats Grid): Toplam seri sayısı, anlık global uç değerler (Max/Min) ve milisaniyelik hassasiyette güncelleme takibi.
+- Profesyonel Veri Export: İzlenen tüm zaman serisi verilerinin etiket detaylarıyla birlikte raporlamaya hazır CSV formatında dışa aktarımı.
 
-2. Gelişmiş Log Keşfi ve KQL Sorgu Motoru
-    - Kibana Tarzı Sorgulama: KQL (Kibana Query Language) uyumlu arama motoru, kompleks sorguları (AND, OR, Keyword) yerel lojiklerle işleyerek Elasticsearch API'sine iletir.
-    - Reaktif Öneri Sistemi: Sorgu esnasında alan isimleri, operatörler (equals, exists) ve değerler için badge destekli, API tabanlı dinamik otomatik tamamlama sağlar.
-    - Histogram Analizi: Log yoğunluğunu milisaniyelik hassasiyetle zaman serisi (ECharts) üzerinde görselleştirir. Grafik üzerinden sürükle-seç (brushing) yöntemiyle anlık tarih filtresi uygulanabilir.
-    - Alan İstatistikleri (Field Stats): İndeks içerisindeki alanların doluluk oranlarını (coverage) ve benzersiz değer sayılarını analiz ederek veri kalitesi hakkında bilgi sunar.
+### Dinamik Dashboard ve Panel Ekosistemi
+- Grid Layout Engine: Panellerin sürükle-bırak yöntemiyle boyutlandırılmasına ve yerleşimlerin dashboard bazlı kaydedilmesine olanak tanıyan motor.
+- Hibrit Görselleştirme: Tek tıkla Çizgi (Line), Alan (Area) ve Çubuk (Bar) grafik türleri arasında veri kaybı olmadan dinamik geçiş.
+- Akıllı Threshold (Eşik) Sistemi: Kritik ve uyarı seviyeleri için görsel renk kodlaması ve anlık sistem sağlığı takibi.
+- Full-Screen ve Fokus Modu: Belirli bir metriğe odaklanmak için tam ekran izleme ve diğer serileri gizleyerek izolasyon sağlama özelliği.
 
-3. Cluster ve Node Performans Analitiği
-    - Canlı Donanım İzleme: Her bir düğümün (node) OS CPU, Disk I/O ve JVM Heap belleği reaktif olarak takip edilir.
-    - Zaman Serisi Geçmişi: Düğüm bazlı performans verileri (CPU ve RAM) store katmanında tarihsel olarak tutulur ve analiz modunda çizgi grafiklerle darboğaz tespiti için sunulur.
-    - Shard ve Topoloji Yönetimi: Primary ve Replica shard dağılımları görselleştirilerek küme stabilitesi anlık olarak denetlenir.
+### Gelişmiş Analitik ve Denetim (Inspect Mode)
+- Derinlemesine İnceleme: Panellerin ham JSON verisi, PromQL sorgu performansı ve istatistiksel özet (Min/Max/Avg) analizi.
+- Heatmap ve Analiz Modu: Veri yoğunluğunu ve sapmalarını analiz eden gelişmiş grafik alt yapısı.
+- Etiket Bazlı Dinamik Filtreleme: Çok sayıda veri serisi arasından kompleks etiket (label) eşleşmeleriyle anlık veri süzme.
 
-## Yazılım Mimarisi ve Sınıf Detayları
+## Teknik Mimari ve Sınıf Yapısı
 
-### Frontend Katmanı (Core Architecture)
-- `Home.vue`: Uygulamanın orkestrasyon merkezi; sidebar navigasyonu, global istatistikler ve sekme yönetimini koordine eder.
-- `IndexManagementModal.vue`: Küme genelindeki indekslerin sağlık dağılımını ve disk kullanım sıralamasını yöneten analitik modül.
-- `NodeManagementModal.vue`: Sunucu tabanlı donanım metriklerini ve düğüm rollerini yöneten operasyonel merkez.
-- `CreateDataViewModal.vue`: Veri kaynağı tanımlama ve validasyon süreçlerini yürüten teknik arayüz.
+Proje, kurumsal yazılım standartlarına uygun olarak Store Pattern ve MVVM prensipleriyle yapılandırılmıştır.
 
-### Veri Yönetimi ve State (Pinia Store)
-- `useElasticStore`: Projenin beyin katmanı. Elasticsearch REST API haberleşmesini yönetir, ham JSON yanıtlarını parse eder ve KQL öneri veritabanını canlı tutar.
-- Data Processing: Gelen ham metrikler (Byte, Timestamp vb.) kullanıcı dostu formatlara (MB/GB, LocalTime) dönüştürülerek state katmanına aktarılır.
+### Frontend Katmanı (Vue 3 ve TypeScript)
+- `Home.vue`: Uygulamanın yönetim merkezi; sorgu motoru, filtreleme lojiği ve global state koordinasyonunu sağlar.
+- `Dashboardpanel.vue`: Grafik render süreçleri, veri işleme algoritması ve panel bazlı aksiyon menülerinin (Edit/Inspect/Delete) çekirdek bileşenidir.
+- `DashboardsModal.vue`: Çoklu dashboard profillerinin yönetimi, favorilere ekleme ve şablon içe/dışa aktarma süreçlerini yürütür.
+- `EditPanelModal.vue`: Panel bazlı sorgu konfigürasyonu ve görselleştirme parametrelerinin yönetildiği uzman editör arayüzüdür.
 
-### Güvenlik ve Haberleşme
-- Secure Proxying: Doğrudan erişime kapalı olan Elasticsearch endpoint'lerine Liman MYS'nin güvenli tünelleme altyapısı üzerinden yetkilendirilmiş erişim sağlanır.
-- Data Export: Sorgulanan veya analiz edilen veriler profesyonel raporlama formatlarında (CSV, JSON) dışa aktarılabilir.
+### Veri Yönetimi (Pinia Stores)
+- `usePrometheusStore`: Prometheus API iletişimini yöneten, metrikleri parse eden ve dinamik autocomplete veritabanını yöneten ana veri katmanıdır.
+- `useDashboardStore`: Dashboard hiyerarşisini, panel yerleşimlerini ve kalıcı kullanıcı tercihlerini yönetir.
+
+### Sistem Entegrasyonu ve Güvenlik
+- Secure Proxy: Liman MYS üzerinden sağlanan `prometheus_proxy` ile doğrudan erişime kapalı olan Prometheus API'sine güvenli ve yetkilendirilmiş erişim sağlanır.
+- Backend Otomasyonu: Sunucu tarafında Prometheus yaşam döngüsü ve metrik toplama süreçleri için optimize edilmiş Python betikleri.
 
 ## Proje Dizini
 
 ```text
 ├── views/
-│   ├── Home.vue                # Ana uygulama konteyneri ve orkestrasyon
-│   ├── IndexManagementModal.vue # İndeks analizi ve operasyonları
-│   ├── NodeManagementModal.vue  # Düğüm performansı ve donanım izleme
-│   └── CreateDataViewModal.vue  # Pattern tanımlama ve validasyon
+│   ├── Home.vue              # Uygulama ana giriş noktası ve yönetim merkezi
+│   ├── Dashboardpanel.vue    # Veri görselleştirme ve panel motoru
+│   ├── DashboardsModal.vue   # Dashboard yönetim arayüzü
+│   ├── EditPanelModal.vue    # Panel konfigürasyon editörü
 ├── stores/
-│   └── elastic.ts              # Elasticsearch API ve Merkezi State motoru
-├── utils/
-│   ├── convert-unit.ts         # Veri birimi dönüşüm lojiği
-│   └── http-common.ts          # Liman MYS güvenli haberleşme katmanı
+│   ├── prometheus.ts         # Metrik veri ve API haberleşme store'u
+│   ├── dashboardStore.ts     # Yerleşim ve Dashboard state yönetimi
 ```
 
-## Kurulum ve Konfigürasyon
+## Kurulum ve Yapılandırma
 
-1. Proje kaynak kodlarını zip formatında paketleyip uzantısını `.lmext` olarak güncelleyin.  
-2. Liman MYS panelinde Eklentiler > Yükle menüsünden paketi sisteme dahil edin.  
-3. Eklenti ayarları sayfasından Elasticsearch Host ve Port bilgilerini tanımlayın.  
-4. Data View oluşturma adımlarını tamamlayarak kurumsal izleme sürecini başlatın.
+1. Paketleme: Proje kaynak kodlarını zip formatında paketleyip uzantısını `.lmext` olarak belirleyin.  
+2. Yükleme: Liman MYS panelinden Eklentiler bölümüne giriş yaparak paketi sisteme dahil edin.  
+3. Konfigürasyon: Eklenti ayarları panelinden Prometheus sunucusunun URL bilgilerini tanımlayın.  
+4. Kullanım: Ana ekrandan PromQL sorgularınızı koşturmaya başlayın veya hazır JSON şablonlarını içe aktararak kendi izleme merkezinizi oluşturun.
 
 ## Geliştirici
 Cuma Kayaoğlu
